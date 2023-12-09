@@ -1,0 +1,12 @@
+.SliderComponent-slider-container input {
+  display: flex;
+  flex-direction: row;
+  width: 150px;
+}
+
+.SliderComponent-slider-minmax {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 12px;
+}

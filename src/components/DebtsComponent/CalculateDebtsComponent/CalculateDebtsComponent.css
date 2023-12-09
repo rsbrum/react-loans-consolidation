@@ -1,0 +1,117 @@
+.CalculateDebtsComponent-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.CalculateDebtsComponent-boxes {
+  display: flex;
+  flex-direction: column;
+}
+
+.CalculateDebtsComponent-configuration-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+.CalculateDebtsComponent-configuration-header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.CalculateDebtsComponent-configuration-slider-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.CalculateDebtsComponent-configuration-slider-container:first-child {
+  width: 200px;
+}
+.CalculateDebtsComponent-results-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.CalculateDebtsComponent-results-box {
+  flex: 6;
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+}
+
+.CalculateDebtsComponent-results-box-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.CalculateDebtsComponent-configuration-slider-container-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 130px;
+}
+
+.CalculateDebtsComponent-configuration-slider-container-box-title {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.CalculateDebtsComponent-configuration-slider-container-box-value {
+  font-size: 20px;
+  font-weight: 500;
+  color: #28b5e0;
+}
+
+.CalculateDebtsComponent-slider-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.CalculateDebtsComponent-slider-container input {
+  display: flex;
+  flex-direction: row;
+  width: 150px;
+}
+
+.slider-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+
+.CalculatorDebtsComponent-slider-minmax {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.green-bg {
+  background: rgba(30, 187, 157, 0.15);
+}
+
+.red-bg {
+  background: rgba(206, 13, 13, 0.15);
+}
+.blue-font {
+  color: #28b5e0;
+}
+
+.green-font {
+  color: #03b391;
+}
+
+.red-font {
+  color: rgba(206, 13, 13, 1);
+}
+
+.f-18 {
+  font-size: 18px;
+}

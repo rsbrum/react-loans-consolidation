@@ -26,37 +26,37 @@ The app does not make usage of any routing nor does it consume any external serv
 
 Folder Structure:
 
-- _components_: Contains all components that are used as building blocks and some reusable components. Some components are nestex within a component folder, because they are not shared by any other component
-- _components/Icons_: Contains all icons
-- _hooks_: Contains hooks used throught the application
-- _interfaces_: Contains interfaces for types used throught the application
-- _lib_: Contains a `finance` lib used to make the financial calculation
-- _pages_: Contains the main components used for routing and views
+- `components`: Contains all components that are used as building blocks and some reusable components. Some components are nestex within a component folder, because they are not shared by any other component
+- `components/Icons`: Contains all icons
+- `hooks`: Contains hooks used throught the application
+- `interfaces`: Contains interfaces for types used throught the application
+- `lib`: Contains a `finance` lib used to make the financial calculation
+- `pages`: Contains the main components used for routing and views
 
 # Components
 
-- _HomePage_: Contains the initial view of the application
-- _DebtsComponent_: Contains the logic to toggle the `DebtsInputsContainerComponent` and `CalculateDebtsComponent` controls the state for the debts array.
-- _DebtsInputsContainerComponent_: Display list of debts and provides functionality to add new debts to the array and also to remove them.
-- _DebtsInputComponent_: Controlled component for the inputs that are used to build a debt. It to make it reusable and also adds suffix/affix based on the type of input (money or percent)
-- _CalculateDebtsComponent_: Displays the values based on the consolidated loan and sliders to modify those values. It makes usage of `finance` lib to make the calculations. It calculates the current payments and new payments seperatly.
-- _FullButtonComponent_: A reusable full button
-- _TransparentButtonComponent_: A reusable transparent button that takes in an icon
-- _SliderComponent_: A controlled slider input
-- _HeaderComponent_: A simple header component that is used in `HomePage` component
+- `HomePage`: Contains the initial view of the application
+- `DebtsComponent`: Contains the logic to toggle the `DebtsInputsContainerComponent` and `CalculateDebtsComponent` controls the state for the debts array.
+- `DebtsInputsContainerComponent`: Display list of debts and provides functionality to add new debts to the array and also to remove them.
+- `DebtsInputComponent`: Controlled component for the inputs that are used to build a debt. It to make it reusable and also adds suffix/affix based on the type of input (money or percent)
+- `CalculateDebtsComponent`: Displays the values based on the consolidated loan and sliders to modify those values. It makes usage of `finance` lib to make the calculations. It calculates the current payments and new payments seperatly.
+- `FullButtonComponent`: A reusable full button
+- `TransparentButtonComponent`: A reusable transparent button that takes in an icon
+- `SliderComponent`: A controlled slider input
+- `HeaderComponent`: A simple header component that is used in `HomePage` component
 
 # Hooks
 
-- _useHover_: A simple hook to control the hovered state of a div element
+- `useHover`: A simple hook to control the hovered state of a div element
 
 # Interfaces
 
-- _Debt_: A debt interface
+- `Debt`: A debt interface
 
 # Lib
 
-- _finance_: A lib with helper functions to make the financial calculations based on the `Debt` properties
+- `finance`: A lib with helper functions to make the financial calculations based on the `Debt` properties
 
 # Pages
 
-- _HomePage_: Holds the main view
+- `HomePage`: Holds the main view

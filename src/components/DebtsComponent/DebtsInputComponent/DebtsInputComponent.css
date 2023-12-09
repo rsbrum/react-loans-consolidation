@@ -1,0 +1,24 @@
+input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  width: 120px;
+  background-color: #f4fbfd;
+}
+
+.DebtsInputComponent-symbol {
+  border: 1px solid #ccc;
+  width: 15px;
+  font-size: 13px;
+  text-align: center;
+  display: flex;
+  padding: 5px;
+}
+
+.DebtsInputComponent-symbol p {
+  margin: auto;
+}
+
+.DebtsInputComponent-container {
+  display: flex;
+  flex-direction: row;
+}
