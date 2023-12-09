@@ -1,46 +1,62 @@
-# Getting Started with Create React App
+## Scope
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Assignment: Build a browser based Debt Consolidation Savings Calculator
 
-## Available Scripts
+Background: Consumers may have many high interest debts, like auto loans, credit cards, or other installment loans. They can save money by combining all of their high interest debts into a single loan with a lower interest rate.
 
-In the project directory, you can run:
+We want to help consumers determine exactly how much money they can save by consolidating their loans.
 
-### `npm start`
+Description: Use the prototype to create a browser based debt consolidation savings calculator.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Users can enter the details of their multiple high interest debts, and the calculator will show them how much they can save with a single consolidated loan. The amount of the new loan will be the sum of the outstanding balances of the existing loans. The user can change the potential term and APR of their consolidated loan to see how those affect the monthly payments and overall repayment.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+The solution would preferably be written in React, but any modern Javascript framework will be acceptable (not JQuery).
+The submission should run in any modern browser (IE compatibility not required)
+A financial calculations library has been included to simplify the loan calculations. Check the link for documentation. Some people seem to have issues figuring out how to use the recommended library, so feel free to use other libraries.
 
-### `npm test`
+# Instructions
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- `npm install` to install the application
+- `npm start` to serve the application
+- Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-### `npm run build`
+# App Structure
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The app does not make usage of any routing nor does it consume any external services.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Folder Structure:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- _components_: Contains all components that are used as building blocks and some reusable components. Some components are nestex within a component folder, because they are not shared by any other component
+- _components/Icons_: Contains all icons
+- _hooks_: Contains hooks used throught the application
+- _interfaces_: Contains interfaces for types used throught the application
+- _lib_: Contains a `finance` lib used to make the financial calculation
+- _pages_: Contains the main components used for routing and views
 
-### `npm run eject`
+# Components
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- _HomePage_: Contains the initial view of the application
+- _DebtsComponent_: Contains the logic to toggle the `DebtsInputsContainerComponent` and `CalculateDebtsComponent` controls the state for the debts array.
+- _DebtsInputsContainerComponent_: Display list of debts and provides functionality to add new debts to the array and also to remove them.
+- _DebtsInputComponent_: Controlled component for the inputs that are used to build a debt. It to make it reusable and also adds suffix/affix based on the type of input (money or percent)
+- _CalculateDebtsComponent_: Displays the values based on the consolidated loan and sliders to modify those values. It makes usage of `finance` lib to make the calculations. It calculates the current payments and new payments seperatly.
+- _FullButtonComponent_: A reusable full button
+- _TransparentButtonComponent_: A reusable transparent button that takes in an icon
+- _SliderComponent_: A controlled slider input
+- _HeaderComponent_: A simple header component that is used in `HomePage` component
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Hooks
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- _useHover_: A simple hook to control the hovered state of a div element
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+# Interfaces
 
-## Learn More
+- _Debt_: A debt interface
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Lib
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- _finance_: A lib with helper functions to make the financial calculations based on the `Debt` properties
+
+# Pages
+
+- _HomePage_: Holds the main view
